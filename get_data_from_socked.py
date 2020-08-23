@@ -3,9 +3,7 @@ import json
 import ast
 import config
 
-stock_name_list = ['NFLX', 'ROKU', 'BYND', 'SQ', 'PYPL', 'AAPL', 'OMER', 'NKTR', 'FB', 'MSFT', 'CCL', 'NCLH', 'SRNE',
-                   'ZM', 'AMC', 'REI', 'OSTK', 'AMRN'
-    , 'SNAP', 'GRUB', 'LYFT', 'OKTA', 'UBER', 'BIDU', 'AMD']  # You can add whatever stock ticker you like to watch
+stock_name_list = ['NFLX', 'ROKU', 'BYND', 'SQ', 'PYPL']  # You can add whatever stock ticker you like to watch
 # here upto 200 tickers for every tick data and no limit for getting AM data
 
 string_for_alpaca = ""
@@ -35,13 +33,13 @@ def on_open():
     ws.send(json.dumps(auth_data))
     listen_message = {"action": "subscribe", "params": string}
     ws.send(json.dumps(listen_message))
-    # AlpacaBuySell().liqidate_positions()  # liquidate all the positions before starting the algorithm
 
 
 def on_message(_, message):
 
     print(f'message: {message}')
-    data = ast.literal_eval(message)
+    data = ast.literal_eval(message)  # This line converts message to dictionary so that we can use it in our trading
+    # algorithm
 
 
 def on_close():
