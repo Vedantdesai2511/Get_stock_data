@@ -8,5 +8,7 @@ I will be very happy if this algorithm can halp you in any way.
 
 # How to use
 
-Download the repo and install all the above given requirements (for your convinience I have created a requirement.txt file in the repo, so you can directly install all the requiremnts from that .txt file)
-Update the config.py file by putting all the required information (for this you may need to have alpaca trading account which you can creat by going to https://app.alpaca.markets/login - automatic!
+* Download the repo and install all the above given requirements (for your convinience I have created a requirement.txt file in the repo, so you can directly install all the requiremnts from that .txt file)
+* Update the config.py file by putting all the required information (for this you may need to have alpaca trading account which you can creat by going to https://app.alpaca.markets/login.
+run the run_code.py You can understand the code by reviewing comments written in the file.
+
