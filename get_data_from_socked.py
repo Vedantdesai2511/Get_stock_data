@@ -6,6 +6,8 @@ import config
 stock_name_list = ['NFLX', 'ROKU', 'BYND', 'SQ', 'PYPL']  # You can add whatever stock ticker you like to watch
 # here, You can add unto 200 tickers for every tick data and there is no limit for getting AM data
 
+# This stock_name_list is just for an example you can add you favorite stocks here
+
 string_for_alpaca = ""  # Initialize string to generate the string to pass on to the API call for getting candle
 # historical data for the stocks in stock_name_list
 
