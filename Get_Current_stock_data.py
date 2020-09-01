@@ -15,6 +15,14 @@ class GetCurrentStockData:
         self.stock_name = stock_name
 
     def stock_current_price(self):
+        """
+        This function takes datat from the google and return the current stock value of inputted stock
+        :return: stock value (float)
+        """
+
+        # Can optimize hte function by using __repr__ function
+        # TODO: bug - Cannot read if the stock value is > 1000.
+
         print(self)
 
         page1 = requests.get('https://finance.yahoo.com/quote/' + str(self) + '?p=' + str(self) + '&.tsrc=fin-srch')
@@ -34,7 +42,7 @@ class GetCurrentStockData:
 
         print(f'current price {self} : {curr_price}')
         time.sleep(0.5)
-        
+
         return curr_price
 
     def stock_current_price_forex(self):
