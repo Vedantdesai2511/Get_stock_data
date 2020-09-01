@@ -55,6 +55,7 @@ def on_message(_, message):
     print(f'message: {message}')
     data = ast.literal_eval(message)  # This line converts message to dictionary so that we can use it in our trading
     # algorithm
+    print(data)
 
 
 def on_close():
