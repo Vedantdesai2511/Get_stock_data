@@ -12,4 +12,6 @@ I will be very happy if this algorithm can halp you in any way.
 * Update the config.py file by putting all the required information (for this you may need to have alpaca trading account which you can creat by going to [this]( https://app.alpaca.markets/login) page.
 * Finally, Run get_data_from_socked.py file and yiu are all set. You can understand the code by reviewing comments written in the file.
 
-I would really appriciate any suggestion you might have so that I can inprove this process or if you have any other reliable methodd of getting live stock data please feel free to share with me here or you can mail me at vedantdesai07@gmail.com. Thank you
+There is another function which gets datat using web scrapping
+
+I would really appriciate any suggestion you might have so that I can inprove this process or if you have any other reliable method of getting live stock data please feel free to share with me here or you can mail me at vedantdesai07@gmail.com. Thank you
