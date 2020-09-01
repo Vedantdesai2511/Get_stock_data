@@ -16,14 +16,12 @@ class GetCurrentStockData:
 
     def stock_current_price(self):
         """
-        This function takes datat from the google and return the current stock value of inputted stock
+        This function takes data from the yahoo finance and return the current stock value of inputted stock
         :return: stock value (float)
         """
 
         # Can optimize hte function by using __repr__ function
         # TODO: bug - Cannot read if the stock value is > 1000.
-
-        print(self)
 
         page1 = requests.get('https://finance.yahoo.com/quote/' + str(self) + '?p=' + str(self) + '&.tsrc=fin-srch')
 
@@ -46,6 +44,11 @@ class GetCurrentStockData:
         return curr_price
 
     def stock_current_price_forex(self):
+        """
+        This function takes data from the yahoo finance and return the current forex pair trading price of inputted
+        currency pair
+        :return: stock value (float)
+        """
 
         page1 = requests.get('https://finance.yahoo.com/quote/' + str(self) + '%3DX?p=' + str(self) + '%3DX')
 
@@ -68,6 +71,10 @@ class GetCurrentStockData:
         return curr_price
 
     def stock_current_price_google_web_scraper(self):
+        
+        # Can optimize hte function by using __repr__ function
+        # TODO: bug - Cannot read if the stock value is > 1000.
+
         page1 = requests.get('https://www.google.com/search?q=' + str(self.stock_name).lower() + '+google+stock&rlz'
                                                                                                  '=1C1CHBF_enUS880US880&oq=' + str(self.stock_name).lower() + '+google+stock&aqs=chrome..69i57j0.9427j0j7&sourceid=chrome&ie=UTF-8')
 
